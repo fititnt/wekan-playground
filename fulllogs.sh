@@ -13,6 +13,7 @@ docker-compose.yml                                        100%[=================
 
 
 # fititnt at bravo in /alligo/code/fititnt/wekan-playground
+$ docker-compose up
 
 Creating network "wekanplayground_wekan-tier" with driver "bridge"
 Creating volume "wekanplayground_wekan-db" with local driver
@@ -189,3 +190,33 @@ wekan-db   | 2018-04-11T05:00:54.664+0000 I INDEX    [conn5] 	 building index us
 wekan-db   | 2018-04-11T05:00:54.665+0000 I INDEX    [conn5] build index done.  scanned 0 total records. 0 secs
 wekan-db   | 2018-04-11T05:00:54.665+0000 I COMMAND  [conn5] command wekan.$cmd command: createIndexes { createIndexes: "unsaved-edits", indexes: [ { name: "userId_1", key: { userId: 1 } } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:113 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 237ms
 
+(...)
+
+
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping wekan-app ... done
+Stopping wekan-db  ... done
+
+# fititnt at bravo in /alligo/code/fititnt/wekan-playground
+$ docker-compose up
+Starting wekan-db ... done
+Recreating wekan-app ... done
+Attaching to wekan-db, wekan-app
+
+
+(...)
+
+wekan-db   | 2018-04-11T05:36:47.978+0000 I NETWORK  [conn3] end connection 172.23.0.3:56168 (8 connections now open)
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping wekan-app ... done
+Stopping wekan-db  ... done
+
+# fititnt at bravo in /alligo/code/fititnt/wekan-playground
+$ docker-compose down --volumes --rmi all
+Removing wekan-app ... done
+Removing wekan-db  ... done
+Removing network wekanplayground_wekan-tier
+Removing volume wekanplayground_wekan-db
+Removing volume wekanplayground_wekan-db-dump
+Removing image mongo:3.2.19
+Removing image quay.io/wekan/wekan

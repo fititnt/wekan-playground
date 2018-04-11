@@ -75,7 +75,7 @@ services:
       #   http://example.com/wekan
       #   http://192.168.1.100
       #---------------------------------------------------------------
-      - ROOT_URL=http://example.com
+      - ROOT_URL=http://127.0.0.1
       #---------------------------------------------------------------
       # == PORT SETTING ==
       # Not needed on Docker, but if you had installed from source,
