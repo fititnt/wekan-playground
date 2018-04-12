@@ -1,9 +1,12 @@
 # wekan-playground
-Rocha's playgrond for Wekan ("The open-source Trello-like kanban").
+[Wekan](https://wekan.github.io/) _is The open-source Trello-like kanban_. This
+repository is just a playground, a testing to see if worth pass for the others
+at the [ChatOps for non-DevOps people Working Group 2018/01](https://github.com/fititnt/chatops-wg).
+More information at [chatops-wg/issues/36](https://github.com/fititnt/chatops-wg/issues/36).
 
-In my honest opinion, for who is looking for a open source & self-hosted
+TL;DR: **In my honest opinion, for who is looking for a open source & self-hosted
 Trello-like software, you can use <https://github.com/wekan/wekan-mongodb> as
-easy way to test on Docker.
+easy way to test on Docker.**
 
 - Website: <https://wekan.github.io/>
 - General install instructions with Docker: <https://github.com/wekan/wekan/wiki/Docker>
